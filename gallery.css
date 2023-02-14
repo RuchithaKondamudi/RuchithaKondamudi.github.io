@@ -1,78 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    text-decoration: none;
 }
-nav{
-    background: skyblue;
-    height: 70px;
-    width: 100%;
+ul{
+    list-style-type: none;
+
 }
-label.logo{
-    color:white;
-    font-size: 35px;
-    line-height: 80px;
-    padding:0 100px;
+.container{
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.navbar{
+    background: rgb(52, 148, 244);
+    color: #fff;
+    height: 60px;
+    width: 100vw;
+    margin-bottom: 2vh;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: white;
+    font-size: 18px;
     font-weight: bold;
-    text-align: left;
+    
 }
-nav ul{
-    float: right;
-    margin-right: 30px;
+.navbar a:hover{
+    color: lightblue;
+
 }
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
 }
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius:3px;
-    text-transform: uppercase;
+.navbar ul{
+    display:flex;
+    flex:wrap;
 }
-a.active,a:hover{
-    background: #2c96e8ed;
-    transition: .5s;
+.navbar ul li{
+    margin-right: 20px;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background: white;
 }
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  .gallery img {
-    width:200px;
-    height: 400px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  .gallery1 img {
-    width: 400px;
-    height: 400px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    object-fit: cover;
-
-  }
-  @media(max-width:768px){
-    .gallery img {
-        flex-direction: column;
-        text-align: center;
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+.item{
+    
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    
+}
+@media(max-width:500px){
+    .containergrid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .gallery1 img{
-        flex-direction: column;
-        text-align: center;
-    }
-    .gallery {
-        flex-direction: column;
-        text-align: center;
-    }
-  }
-  
+}
